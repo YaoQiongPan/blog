@@ -3,7 +3,7 @@ highlighter: null
 permalink: /:title
 
 url:
-baseurl:panyaoqiong.com
+baseurl: panyaoqiong.com
 
 redcarpet:
   extensions: [strikethrough, tables]
