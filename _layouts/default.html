@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% include head.html %}
-  </head>
-  <body>
-    <div class="container azul">
-      <header class="top row gutters{% if page.title == "Home" %} fadeInLeft animated{% endif %}">
-        <div class="col span_2 center">
-          <!-- TODO: add baseurl to the logo link -->
-          <a href="{{ site.url }}" id="logo" title="{{ site.data.brume.name }}"
-             style="background-image: url({{site.baseurl}}/public/images/logo.png);"></a>
-        </div>
-        {% include navigation.html %}
-      </header>
-
-      {{ content }}
-
-      <footer>
-        <p>
-          
-        </p>
-      </footer>
-    </div>
-
-    <!-- scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="{{site.baseurl}}/public/js/jquery.fitvids.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("article").fitVids();
-      });
-    </script>
+<head>
+	<title>潘瑶琼的Blog</title>
+	<meta charset="UTF-8">
+</head>
+  <body style="width:100%;">
+	<h1 style="text-align:center;">建设中...</h1>
+	<h3 style="text-align:center;"><span id="second">3</span>秒后跳转到本人在简书的临时Blog地址</h3>
+	<script>
+		var second = document.getElementById('second');
+		var init = 3;
+		var intval = setInterval(function(){
+			init = init - 1;
+			if(init <= 0){
+				location.href = 'http://www.jianshu.com/users/cbe0454b1d76/latest_articles';
+			}
+			second.innerHTML = init;
+		}, 1000);
+	</script>
   </body>
 </html>
